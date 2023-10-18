@@ -1,8 +1,18 @@
-import { Home } from "./pages";
+import { Route, Routes } from "react-router-dom";
+import { Home, SearchResults, SingleHotel } from "./pages";
 import "./App.css";
 
 function App() {
-  return <Home />;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route
+        path="/hotels/:name/:address/:Id/reserve"
+        element={<SingleHotel />}
+      ></Route>
+      <Route path="hotels/:address" element={<SearchResults />} />
+    </Routes>
+  );
 }
 
 export default App;
