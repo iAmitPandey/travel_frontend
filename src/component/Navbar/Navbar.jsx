@@ -30,7 +30,7 @@ export const Navbar = ({ route }) => {
     <header className="heading d-flex align-center">
       <h1 className="heading-1">
         <Link className="link" to="/">
-          TravelO
+          Let's Travel
         </Link>
       </h1>
       {route !== "wishlist" && (
